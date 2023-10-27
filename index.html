@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--lang attribute helps in the page to get indexed in search results and also for screen readers
+    as a word can be pronounced different in differnt languages. example lang="en-US"
+    For example, if a user searches for content in a specific language, search engines can use the 
+    lang attribute to identify web pages that match their language preferences and present those pages 
+    higher in the search results. This can help improve the visibility and accessibility of a website 
+    or web application for users who speak different languages.
+    -->
+
+<head>
+
+    <!-- meta info about the page -->
+    <meta charset="utf-8" />
+    <!-- provides info to the browser to interpret/decode the character using the correct encoding method -->
+
+    <title>Title of the page</title>
+    <!-- Text in the title tag is displayed in browsers tab, as a suggested name when trying to bookmark -->
+    <meta name="title" content="Your webpage title here">
+    <!-- used for SEO purpose, usually displayed as title of the page in the SERP -->
+    <meta name="description" content="description of the page" />
+    <meta name="keywords" content="keywords,keywords" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- In mobile or narrow devices, browsers normally render the page in a virutual screen or viewport, which is usually larger
+         than the device width. The page is then zoomed out to device size to show the entire page. This is done by the browser to 
+         make the page optimized for mobile view, if not for the zooming out, there will be scrollbars.
+
+         But when the page is optimized for mobile-view using media-queries, the queries don't work properly becase they are based on
+         viewport size which is larger than the device width. In-order to avoid this issue we need to include the meta viewport tag
+         to specify the mobile browser that the viewport width should be equal to the device-width.
+     -->
+
+    <!-- meta info while sharing the page -->
+    <meta name="og:title" content="Title of the page" />
+    <meta name="og:description" content="description of the page" />
+    <meta name="og:url" content="canonical-url-of-this-page" />
+    <meta name="og:image" content="url-of-the-image-where-it-is-hosted" />
+    <meta name="twitter:title" content="Title of the page" />
+    <meta name="twitter:description" content="description of the page" />
+    <meta name="twitter:image" content="url-of-the-image-where-it-is-hosted" />
+    <meta name="twitter:image:alt" content="url-of-the-image-where-it-is-hosted" />
+
+    <!-- favicons -->
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-64x64.png" sizes="64x64" />
+    <link rel="icon" type="image/png" href="favicon-128x128.png" sizes="128x128" />
+    <!-- They icon is used to display on the title bar of the page and when bookmarked or saved to home-screen 
+        in android devices. They help in improving brand recognition.
+    -->
+    <link rel="apple-touch-icon" type="image/png" href="favicon-180x180.png" sizes="180x180" />
+    <!-- apple-touch-icon is used to increase visibility of page when bookmarked or saved to home-screen in apple devices.
+        Without this, the device will capture a screenshot of the page and use that as an alternative, which might not look good. 
+    -->
+
+    <!-- canonical-url and alternate urls -->
+    <link rel="canonical" href="" />
+    <!-- The rel="canonical" attribute is used to tell search engines which URL represents the preferred version of a web page
+    when there are multiple versions of the same content. For example, if a blog post appears on multiple pages of a website
+    (such as on the main blog page and on a category page), the rel="canonical" tag can be used to tell search engines which
+    URL should be indexed and displayed in search results.    
+    In the example you provided, the canonical URL is set to https://www.setmore.com/, indicating that this is the preferred
+    version of the web page and that other versions (such as non-www versions or versions with tracking parameters) should
+    be considered duplicate content. -->
+    <link rel="alternate" hreflang="x-default" href="" />
+    <!-- The rel="alternate" attribute is used to indicate that there are alternate versions of a web page available, such as in
+    different languages or for different regions. The hreflang attribute is used to specify the language or region of each
+    alternate URL.    
+    In the example you provided, the hreflang attribute is set to "x-default", which indicates that the specified URL
+    (https://www.setmore.com/) should be used as the default version of the page for users who do not have a specific
+    language or region preference. This tag is useful for sites that do not have a single preferred language or region. -->
+    <link rel="alternate" hreflang="es" href="" />
+    <!-- This tag specifies an alternate version of the page for users who speak Spanish. The hreflang attribute is set to "es",
+    indicating that the URL (https://www.setmore.com/es/) is the Spanish-language version of the page. This tag helps search
+    engines to correctly index and display the Spanish version of the page for users who speak that language. -->
+
+    <!-- assets - preloaded assets, styles, internal-style, scripts -->
+    <link rel="preload" href="./index.css" as="style" />
+    <link rel="stylesheet" href="./index.css" />
+    <style>
+        h1 {
+            background-color: red;
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                background-color: yellow;
+            }
+        }
+    </style>
+
+    <script src="" defer></script>
+    <script src="" async></script>
+    <!-- defer and async are attributes that can be used with <script> tags in HTML to 
+        control how JavaScript files are loaded and executed.
+        
+        The defer attribute tells the browser to download the script file in the background 
+        and defer its execution until the page has finished parsing.This means that the HTML 
+        parsing and rendering process will not be blocked by the JavaScript file, and the 
+        file will be executed once the DOM is fully loaded. Multiple scripts with defer attributes
+        will be executed in the order they appear in the HTML document.    
+
+        The async attribute tells the browser to download the script file in the background and 
+        execute it as soon as it is downloaded, without waiting for the HTML parsing to complete.
+        This means that the script file will not block the HTML parsing and rendering process, 
+        but it may execute before the DOM is fully loaded. Multiple scripts with async attributes 
+        may be executed in any order.    
+        
+        In general, defer is preferred over async for scripts that need to be executed after the DOM is 
+        fully loaded, since it ensures that the scripts will be executed in the order they appear in the 
+        HTML document.However, async may be more appropriate for scripts that do not depend on the DOM, 
+        or for cases where it is important to load the script file as quickly as possible. -->
+</head>
+
+<body>
+
+    <!-- semantics tags - why? -->
+    <header>
+        <a href="">
+            <img src="" alt="">
+        </a>
+        <nav></nav>
+    </header>
+    <main>
+        <h1 style="color: green;">Haneef</h1>
+        <aside></aside>
+        <section>
+            <article>
+                <header></header>
+                <div>
+                    <picture>
+                        <source srcset="assets/image/picture-min.webp 1x,
+                            assets/image/picture-min-2x.webp 2x" type="image/webp" media="(max-width: 767px)" />
+                        <source srcset="assets/image/picture.webp 1x,
+                            assets/image/picture-2x.webp 2x" type="image/webp" />
+                        <source srcset="assets/image/picture-min.png 1x,
+                            assets/image/picture-min-2x.png 2x" type="image/png" media="(max-width: 767px)" />
+                        <source srcset="assets/image/picture.png 1x,
+                            assets/image/picture-2x.png 2x" type="image/png" />
+                        <img src="assets/image/picture.png" alt="">
+                    </picture>
+                </div>
+            </article>
+            <article>
+                <header></header>
+                <div></div>
+            </article>
+        </section>
+    </main>
+    <!-- heading tags -->
+
+    <!-- img tag -->
+
+    <!-- anchor tag -->
+
+    <!-- span tag -->
+
+    <!-- div tag -->
+
+    <!-- form elements -->
+
+
+
+    <script src="./index.js"></script>
+    <script src=""></script>
+</body>
+
+</html>
